@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMP Creator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Hero -->
+  <header>
+    <h1>SMP Creator</h1>
+    <p>Speel mee op de leukste Nederlandse SMP-server!</p>
+    <a href="#server-info" class="btn">Join Server</a>
+  </header>
+
+  <!-- Server Info -->
+  <section id="server-info">
+    <h2>Server Info</h2>
+    <p>IP: <b>Creatorsmp-FTEO.aternos.me</b></p>
+    <p>Poort: <b>38570</b></p>
+    <p>Status: <span id="server-status">Offline</span></p>
+    <p>Spelers: <span id="player-count">0/0</span></p>
+  </section>
+
+  <!-- Minimapsysteem -->
+  <section id="minimap-section">
+    <h2>MiniMap</h2>
+    <canvas id="minimap" width="400" height="300"></canvas>
+  </section>
+
+  <!-- Nieuws -->
+  <section id="news-section">
+    <h2>Nieuws</h2>
+    <div id="news-list"></div>
+
+    <!-- Admin panel -->
+    <div id="admin-news" style="display:none;">
+      <h3>Voeg nieuws toe (Admin)</h3>
+      <form id="admin-news-form">
+        <input type="text" id="news-title" placeholder="Titel" required>
+        <textarea id="news-message" placeholder="Bericht" required></textarea>
+        <button type="submit">Toevoegen</button>
+      </form>
+      <p id="admin-feedback"></p>
+    </div>
+  </section>
+
+  <!-- Reports -->
+  <section id="reports-section">
+    <h2>Report Formulier</h2>
+    <form id="report-form">
+      <input type="text" id="player-name" placeholder="Speler Naam" required>
+      <select id="report-type" required>
+        <option value="">Selecteer type</option>
+        <option value="Bug">Bug</option>
+        <option value="Cheater">Cheater</option>
+        <option value="Overig">Overig</option>
+      </select>
+      <textarea id="report-message" placeholder="Bericht" required></textarea>
+      <button type="submit">Verzend</button>
+    </form>
+    <p id="report-feedback"></p>
+  </section>
+
+  <!-- Discord Info -->
+  <section id="discord-section">
+    <h2>Discord</h2>
+    <p>Online leden: <span id="discord-online">0</span></p>
+    <ul id="discord-messages"></ul>
+  </section>
+
+  <!-- Admin login -->
+  <section id="login-section">
+    <h2>Admin Login</h2>
+    <form id="login-form">
+      <input type="text" id="login-name" placeholder="Gebruikersnaam" required>
+      <input type="password" id="login-pass" placeholder="Wachtwoord" required>
+      <button type="submit">Login</button>
+    </form>
+    <p id="login-feedback"></p>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
